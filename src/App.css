@@ -1,0 +1,288 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mainpage{
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigationbar{
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button-enabled {
+  background-color: green;
+  color: white;
+}
+
+.submit-button-disabled {
+  opacity: 0.5;
+}
+
+.Questionlist{
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+  border-color: #aaaaaa;
+  margin: 5px;
+  width: 1200px;
+  margin-bottom: 30px;
+}
+
+.leaderboard{
+  padding-top: 23px;
+}
+
+.Questionlist-title{
+  font-size: larger;
+  font-weight: 800;
+  border-bottom: solid 1px;
+  border-color: #aaaaaa;
+}
+
+.Questionlist-questions{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding: 10px;
+}
+
+.question{
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+  border-color: #d6d6d6;
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 300px;
+  border-radius: 4px;
+}
+
+.author {
+  font-size: large;
+  font-weight: 700;
+  color: #1e1e1e;
+  padding-top: 10px;
+}
+
+.date {
+  font-size: small;
+  font-weight: 200;
+  color: #373737;
+  padding-bottom: 30px;
+}
+
+.question-button {
+  font-size: small;
+  color: #179b54;;
+  background-color: white;
+  border-color: #179b54;
+  border: solid 1px;
+  border-radius: 4px;
+  width: 90%;
+  height: 40px;
+}
+
+.question-button:hover {
+  color: white;
+  background-color: #10743f;
+  border-color: #10743f;
+  border: solid 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.leaderboard-grey {
+  background-color: #f2f2f2;
+}
+
+.column1 {
+  display: flex;
+  align-items: center; 
+  padding: 5px;
+  width: 500px;
+  height: 70px;
+}
+
+.column1 img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.column1 .user-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.column1 .user-info .user-id {
+  font-size: 14px;
+  color: #666666; 
+  align-self:flex-start;
+}
+
+
+.column2{
+  padding: 5px;
+  width: 300px;
+}
+
+.column3{
+  padding: 5px;
+  width: 300px;
+}
+
+.option{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-right: 15px;
+  border: solid 1px #aaaaaa;
+  border-radius: 5%;
+}
+
+.click-button {
+  height: 40px;
+  font-size: 19px;
+  color: white;
+  background-color: rgb(163, 241, 222);
+}
+
+.click-button:hover{
+  cursor: pointer;
+  color:black;
+  background-color: rgb(62, 207, 188);
+}
+
+.click-disabled {
+  height: 40px;
+  font-size: 19px;
+}
+
+.option-container{
+  display: flex;
+}
+
+nav{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 5vh;
+  background:white;
+  color: white;
+  border-bottom: solid 2px rgb(197, 195, 195);
+  padding-top: 30px;
+}
+
+.ul-list{
+  width: 30%; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.ul-list a:visited {
+  color: black;
+  text-decoration: underline;
+}
+
+.ul-list a {
+  color: black;
+  text-decoration: none;
+}
+
+.ul-list a:hover {
+  text-decoration: underline;
+}
+
+.logout{
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.logout p {
+  color: black;
+}
+
+.logout-button {
+  color: black;
+}
+
+.logout-button:hover{
+  cursor: pointer;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-text{
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 1000px;
+}
