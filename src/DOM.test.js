@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import Leaderboard from './components/Leaderboard'
@@ -58,5 +58,14 @@ describe('Testing DOM elements', () => {
 
         const login = component.queryAllByTestId('login')
         expect(login.length).not.toEqual(0)
+
+        //Write tests using fireEvent
+        const userField = component.getByTestId('user');
+        fireEvent.change(userField, { target: { value: 'sarahedo' } });
+        const passwordField = component.getByTestId('password');
+        fireEvent.change(passwordField, { target: { value: 'password123' } });
+
+        const submitButton = component.getByTestId('login');
+        fireEvent.click(submitButton);
     })
 });

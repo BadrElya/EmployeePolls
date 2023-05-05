@@ -46,6 +46,22 @@
   align-items: center;
 }
 
+.mainpage-button {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.mainpage-button.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
 .navigationbar{
   margin-bottom: 10px;
 }
