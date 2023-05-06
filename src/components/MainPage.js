@@ -5,7 +5,7 @@ import QuestionList from './QuestionList';
 
 const MainPage = ({ answeredQuestions, unansweredQuestions, auth }) => {
   const navigate = useNavigate();
-  const [selectedQuestions, setSelectedQuestions] = useState(unansweredQuestions);
+  const [selectedQuestions, setSelectedQuestions] = useState(unansweredQuestions || []);
 
   useEffect(() => {
     !auth && navigate('/login');
