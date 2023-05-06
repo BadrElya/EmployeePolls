@@ -3,16 +3,25 @@ import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { setAuthUser } from '../actions/userAuth'
 
-const Login = ({ dispatch, auth, users }) => {
+const Login = ({ dispatch, auth }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
+
+  const users = ['sarahedo','tylermcginnis','mtsamis','zoshikanlu'];
+  const passwords = ['password123','abc321','xyz123','pass246']
 
   const handleLogin = (e) => {
     e.preventDefault();
     dispatch(setAuthUser(user));
   };
-  
+
+  const handleSelectChange = (e) => {
+    const index = e.target.value;
+    setUser(users[index]);
+    setPassword(passwords[index]);
+  };
+
   useEffect(() => {
     auth && navigate(-1)
   }, [auth, navigate])
@@ -28,15 +37,19 @@ const Login = ({ dispatch, auth, users }) => {
       <h1>Log In</h1>
       <form className='form' onSubmit={handleLogin}>
         <label>
-          Username
+          Select a User
         </label>
-        <input
-          type='text'
-          value={user}
+        <select
+          value={users.indexOf(user)}
           data-testid='user'
           className='form-text'
-          onChange={(e) => setUser(e.target.value)}
-        />
+          onChange={handleSelectChange}
+        >
+          <option value=''>-- Select --</option>
+          {users.map((u, i) => (
+            <option key={u} value={i}>{u}</option>
+          ))}
+        </select>
         <label>
           Password
         </label>
@@ -54,7 +67,7 @@ const Login = ({ dispatch, auth, users }) => {
             type='submit'
           >
             Submit
-        </button>
+          </button>
         </div>
       </form>
     </div>
